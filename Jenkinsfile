@@ -13,7 +13,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 echo "Running syntax check for terminal application..."
-                sh "python -m py_compile app.py"
+                sh "python3 -m py_compile app.py"
             }
         }
         stage('Docker Build & Push') {
